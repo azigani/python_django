@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block extra_head %}{% if csp_nonce %}<meta name="csp-nonce" content="{{ csp_nonce }}">{% endif %}{% endblock %}
 {% block content %}
 <div class="container mt-4">
     <h2>{% if form.instance.pk %}Modifier le rôle{% else %}Ajouter un rôle{% endif %}</h2>
